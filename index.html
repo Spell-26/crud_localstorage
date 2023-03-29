@@ -16,26 +16,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
+
+
 </head>
 <body>
-    <header id="cabecera" class="cabecera">
-        <div id="acciones" class="informacion_superior">
-            <a class="boton blanco" id="registro" onclick="mostrar_modal()"><span>Registrarse</span> </a>
-            <a class="boton blanco"><span>Iniciar sesión</span></a>
-        </div>
+    <!-- header -->
+    <script src="js/componentes/header.js"></script>
 
-       <div id="empleado" class="informacion_superior">
-        <span class="material-symbols-outlined">
-            face
-            </span>
-        <a class="boton blanco"><span>NombreUsuario</span> </a>
-        <a class="boton escarlata"><span>Cerrar sesión</span> </a>
 
-       </div>
-        
-    </header>
+    <script src="js/componentes/landing.js"></script>
 
-    <section id="listado_empleados">
+
+    <section id="listado_empleados" class="primer_elemento">
         <h1 class="titulo_seccion">Todos los empleados.</h1>
         <p class="tip">Aquí puedes observar un listado con todos los empleados registrados,
             también podrás editarlos con el icono: <span class="material-symbols-rounded">
@@ -46,14 +38,21 @@
         </p>
         <div class="contenedor">
             <table id="tabla_empleados">
-                <tr id="cabecera_empleados">
-                    <th>Nombre</th>
-                    <th>Edad</th>
-                    <th>Profesión</th>
-                    <th>Departamento</th>
-                    <th>Dirección</th>
-                    <th colspan="2">Acciones</th>
-                </tr>
+                <thead>
+                    <tr id="cabecera_empleados">
+                        <th>Nombre</th>
+                        <th>Correo electronico</th>
+                        <th>Edad</th>
+                        <th>Profesión</th>
+                        <th>Direccion</th>
+                        <th>Departamento</th>
+                        <th colspan="2">Acciones</th>
+                    </tr>
+                </thead>
+                
+                <tbody class="cuerpo_tabla_empleados">
+                    
+                </tbody>
             </table>
         </div>
     </section>
@@ -61,5 +60,15 @@
     
 </body>
 </html>
-<script src="js/componentes/header.js"></script>
-    <script src="js/componentes/modal_registro.js"></script>
+<!--Inicio de sesión-->
+<script src="js/backend/iniciar_sesion.js"></script>
+
+<script src="js/componentes/modal_registro.js"></script>
+
+<!--Backend registrar empleado-->
+<script src="js/backend/guardar_empleado.js"></script>
+<!--Backend listar empleados-->
+<script src="js/backend/listar_empleado.js"></script>
+<!--Modal Actualizar empleado-->
+<script src="js/componentes/modal_actualizar_empleado.js"></script>
+

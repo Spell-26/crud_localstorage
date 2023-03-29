@@ -17,9 +17,9 @@ body {
     padding: 1em;
     position: fixed;
     margin-left: 1em;
-    
+    box-shadow: 0 1px 2px 1px #0000003e;
     width: 98%;
-    border-radius: 0;
+    border-radius: 10px;
     transition: background-color 0.5s ease, border-radius 1.5s ease-in , margin-top 0.5s ease;
 }
 
@@ -94,14 +94,85 @@ body {
   
 }
 
-
-/* Seccion de la lista de empleados */
-
-#listado_empleados {
+.primer_elemento {
     padding-top: 5em;
     margin: 0 2em 1em 2em;
     background-color: #fffff9;
 }
+
+
+/* Landing */
+
+#landing {
+    display: flex;
+}
+#landing_izquierdo {
+    width: 60%;
+}
+#landing_derecho {
+    width: 40%;
+    
+}
+
+#formulario_landing {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0;
+    padding: 5em 2em;
+    background-color: #b38af9;
+    border-radius: 1em;
+    box-shadow: -1px 2px 4px 0px #0000003e;
+}
+#encabezado_login {
+    font-size: 1.5em;
+    margin-bottom: 0.5rem;
+}
+
+#contrasena_login, #email_login {
+    margin: 0.6em 0;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 0.3em;
+}
+
+
+
+#cabecera_landing {
+    text-align: center;
+    margin: 1em 0 0.5em 0;
+}
+
+#contenedor_landing h2{
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#contenedor_landing p{
+    font-size: 0.7em;
+    font-style: italic;
+    text-align: center;
+    margin: 0.5em 0;
+    color: rgb(93, 191, 191);
+}
+
+#contenedor_landing h3 {
+    padding: 1em;
+    font-size: 1em;
+}
+
+#contenedor_landing ul {
+    
+    padding: 0 3.5em;
+    font-size: 0.8em;
+}
+
+#contenedor_landing ul li{
+    padding: 1em 0;
+}
+
+
+/* Seccion de la lista de empleados */
+
 
 .titulo_seccion {
     padding: 0.5em 0 0 0.4em;
@@ -171,6 +242,10 @@ body {
     display: none;
     z-index: -1;
 }
+#modal_actualizar {
+    display: none;
+    z-index: -1;
+}
 
 
 .formulario {
@@ -215,4 +290,43 @@ body {
 }
 #cerrar {
     cursor: pointer;
+}
+#cerrar_actualizar {
+    cursor: pointer;
+}
+
+
+/* interfaces cambiantes dependiendo del estado de log in*/
+#listar_empleados, #online, #username, #log_out, #listado_empleados{
+    display: none;
+}
+
+
+
+/*mensajes de alerta*/
+
+.alerta {
+    color: rgb(255, 255, 255);
+    font-size: small;
+    font-style: italic;
+    margin: 1em 0;
+    border-bottom: 1px solid red;
+    display: none;
+}
+
+.cuerpo_tabla_empleados tr td {
+    padding: 1em;
+    margin: 1em 1em;
+}
+.cuerpo_tabla_empleados tr td button{
+    padding: 1em;
+    background-color: rgb(238, 150, 73);
+    font-weight: bolder;
+    color: white;
+    border-radius: 1em;
+    border: none;
+    cursor: pointer;
+}
+.cuerpo_tabla_empleados tr td button:hover{
+    background-color: rgb(113, 40, 130);
 }
